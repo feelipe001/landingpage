@@ -12,7 +12,7 @@
   --text: #fff;
   --highlight: #a020f0;
 }
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {margin: 0; padding: 0; box-sizing: border-box;}
 body {
   background: linear-gradient(to bottom, #111, #000);
   color: var(--text);
@@ -58,13 +58,12 @@ p { color: #ccc; margin-bottom: 25px; }
 
 .capas-marquee {
   overflow: hidden;
-  white-space: nowrap;
   width: 100%;
   margin: 30px 0;
 }
 .capas-track {
-  display: inline-flex;
-  animation: scroll 40s linear infinite;
+  display: flex;
+  width: max-content;
 }
 .capas-track img {
   width: 150px;
@@ -73,6 +72,23 @@ p { color: #ccc; margin-bottom: 25px; }
   transition: transform 0.3s;
 }
 .capas-track img:hover { transform: scale(1.05); }
+
+/* Animações */
+.scroll-left {
+  animation: scrollLeft 40s linear infinite;
+}
+.scroll-right {
+  animation: scrollRight 40s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scrollRight {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(50%); }
+}
 
 .benefits {
   display: flex;
@@ -106,11 +122,6 @@ footer {
   color: #555;
   font-size: 12px;
 }
-
-@keyframes scroll {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
 </style>
 </head>
 <body>
@@ -123,32 +134,41 @@ footer {
 <a href="https://links.unitvnet.app/IAFLDMW" class="button android" target="_blank">📲 Baixar para Android</a>
 <a href="https://wa.me/message/3IY74MCWLWN2B1" class="button iphone" target="_blank">📺 iPhone / Smart TV</a>
 
-<!-- Faixa de capas 1 -->
+<!-- Faixa 1 - Vai para esquerda -->
 <div class="capas-marquee">
-  <div class="capas-track">
+  <div class="capas-track scroll-left">
     <img src="https://image.tmdb.org/t/p/w500/8GxvptC1HfCdb2VqN8gONzOB9k6.jpg" alt="Oppenheimer">
-    <img src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg" alt="Velozes 10">
     <img src="https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg" alt="Guardiões da Galáxia">
     <img src="https://image.tmdb.org/t/p/w500/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg" alt="Vingadores">
-    <img src="https://image.tmdb.org/t/p/w500/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg" alt="Shang-Chi">
     <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Spider-Man">
-    <img src="https://image.tmdb.org/t/p/w500/7slI7qLOLS2z3bmFMwvzZ4v9Qj4.jpg" alt="Pantera Negra">
-    <img src="https://image.tmdb.org/t/p/w500/56v2KjBlU4XaOv9rVYEQypROD7P.jpg" alt="Stranger Things">
-    <img src="https://image.tmdb.org/t/p/w500/vgF9hTYfJQ5oyOe1ZzqbtKlhk82.jpg" alt="Peaky Blinders">
+    <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Avatar">
+    <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="The Batman">
+    <!-- DUPLICADO -->
+    <img src="https://image.tmdb.org/t/p/w500/8GxvptC1HfCdb2VqN8gONzOB9k6.jpg">
+    <img src="https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg">
+    <img src="https://image.tmdb.org/t/p/w500/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg">
+    <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg">
+    <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg">
+    <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg">
   </div>
 </div>
 
-<!-- Faixa de capas 2 -->
+<!-- Faixa 2 - Vai para direita -->
 <div class="capas-marquee">
-  <div class="capas-track">
+  <div class="capas-track scroll-right">
     <img src="https://image.tmdb.org/t/p/w500/bxSBOAD8AuMHYMdW3jso9npAkgt.jpg" alt="Tulsa King">
     <img src="https://image.tmdb.org/t/p/w500/t8YjA2FBD2X4rGTgkpQJZ3pX6RD.jpg" alt="Grey's Anatomy">
     <img src="https://image.tmdb.org/t/p/w500/zEqyD0SBt6HL7W9JQoWw1qHJjLR.jpg" alt="The Flash">
-    <img src="https://image.tmdb.org/t/p/w500/hZkgoQYus5vegHoetLkCJzb17zJ.jpg" alt="Se7en">
     <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7Z6d0tiUbe1Q7oU6z8m.jpg" alt="Breaking Bad">
     <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="Wonder Woman">
-    <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Avatar">
-    <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="The Batman">
+    <img src="https://image.tmdb.org/t/p/w500/hZkgoQYus5vegHoetLkCJzb17zJ.jpg" alt="Se7en">
+    <!-- DUPLICADO -->
+    <img src="https://image.tmdb.org/t/p/w500/bxSBOAD8AuMHYMdW3jso9npAkgt.jpg">
+    <img src="https://image.tmdb.org/t/p/w500/t8YjA2FBD2X4rGTgkpQJZ3pX6RD.jpg">
+    <img src="https://image.tmdb.org/t/p/w500/zEqyD0SBt6HL7W9JQoWw1qHJjLR.jpg">
+    <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7Z6d0tiUbe1Q7oU6z8m.jpg">
+    <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg">
+    <img src="https://image.tmdb.org/t/p/w500/hZkgoQYus5vegHoetLkCJzb17zJ.jpg">
   </div>
 </div>
 
