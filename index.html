@@ -6,63 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seu Acesso</title>
     <style>
+        :root {
+            --primary: #FFD700;
+            --secondary: #00FF85;
+            --bg: #000;
+            --text: #fff;
+            --neon: #0ff;
+        }
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
         body {
-            background-color: #000;
-            color: white;
+            background-color: var(--bg);
+            color: var(--text);
             font-family: 'Arial', sans-serif;
             text-align: center;
-            padding: 30px;
+            padding: 30px 10px;
+            overflow-x: hidden;
         }
         .logo {
-            color: #FFD700;
+            color: var(--primary);
             font-weight: bold;
-            font-size: 28px;
-            margin-bottom: 40px;
+            font-size: 30px;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease;
         }
         h1 {
-            font-size: 26px;
-            margin-bottom: 20px;
+            font-size: 24px;
+            margin-bottom: 15px;
+            animation: fadeInUp 2s ease;
         }
         h1 span {
-            color: #FFD700;
+            color: var(--primary);
         }
         p {
             color: #ccc;
             font-size: 16px;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
+            animation: fadeInUp 2.5s ease;
         }
         .button {
-            display: block;
+            display: none;
             width: 90%;
             max-width: 320px;
             margin: 10px auto;
             padding: 15px;
-            background-color: #FFD700;
+            background-color: var(--primary);
             color: #000;
             text-decoration: none;
             border-radius: 10px;
             font-weight: bold;
             font-size: 18px;
-            transition: 0.2s;
+            transition: 0.3s;
         }
         .button:hover {
             transform: scale(1.05);
         }
         .button.secundario {
-            background-color: #00FF85;
-            color: #000;
+            background-color: var(--secondary);
         }
-        .benefits {
+        .benefits, .logos-marquee {
             display: flex;
             justify-content: center;
             gap: 20px;
-            margin-top: 40px;
+            margin-top: 30px;
             flex-wrap: wrap;
+            animation: fadeInUp 3.5s ease;
         }
         .benefit {
             max-width: 150px;
@@ -75,23 +86,108 @@
             color: #fff;
             font-size: 14px;
         }
+        .logo-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            position: relative;
+            margin: 30px auto;
+            animation: girar 10s linear infinite;
+        }
+        .logo-circle img {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+        }
+        .logo1 { top: 0; left: 70px; }
+        .logo2 { top: 70px; right: 0; }
+        .logo3 { bottom: 0; left: 70px; }
+        .logo4 { top: 70px; left: 0; }
+        .logos-marquee img {
+            width: 50px;
+            margin: 0 10px;
+            animation: scroll 10s linear infinite;
+        }
+        .popup-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--secondary);
+            color: #000;
+            padding: 10px 20px;
+            border-radius: 30px;
+            box-shadow: 0 0 10px var(--neon);
+            font-weight: bold;
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+        .countdown {
+            color: var(--neon);
+            margin-bottom: 20px;
+            font-weight: bold;
+            animation: fadeIn 4s ease;
+        }
         footer {
-            margin-top: 60px;
+            margin-top: 40px;
             color: #555;
             font-size: 12px;
+            animation: fadeIn 4s ease;
+        }
+
+        @keyframes girar {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scroll {
+            0% {transform: translateX(100%);}
+            100% {transform: translateX(-100%);}
+        }
+        @keyframes pulse {
+            0% {box-shadow: 0 0 5px var(--neon);}
+            50% {box-shadow: 0 0 20px var(--neon);}
+            100% {box-shadow: 0 0 5px var(--neon);}
         }
     </style>
+    <script>
+        let timeLeft = 5;
+        const timer = setInterval(() => {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                document.querySelectorAll('.button').forEach(btn => btn.style.display = 'block');
+                document.getElementById('countdown').style.display = 'none';
+            } else {
+                document.getElementById('countdown').innerHTML = "Liberando acesso em " + timeLeft + "s...";
+            }
+            timeLeft -= 1;
+        }, 1000);
+    </script>
 </head>
 <body>
 
     <div class="logo">🔓 SEU ACESSO</div>
 
+    <div class="logo-circle">
+        <img src="https://img.icons8.com/ios-filled/50/FFD700/netflix.png" class="logo1" alt="Netflix">
+        <img src="https://img.icons8.com/ios-filled/50/FFD700/disney-plus.png" class="logo2" alt="Disney">
+        <img src="https://img.icons8.com/ios-filled/50/FFD700/amazon-prime-video.png" class="logo3" alt="Prime">
+        <img src="https://img.icons8.com/ios-filled/50/FFD700/hbo.png" class="logo4" alt="HBO">
+    </div>
+
     <h1>Mais de <span>15 mil pessoas</span> já descobriram.<br>E você?</h1>
 
     <p>Seu acesso sem limites começa aqui.<br>Escolha seu dispositivo e desbloqueie agora.</p>
 
-    <a href="https://links.unitvnet.app/IAFLDMW" class="button" target="_blank">📲 Baixar para Android</a>
+    <div class="countdown" id="countdown">Liberando acesso em 5s...</div>
 
+    <a href="https://links.unitvnet.app/IAFLDMW" class="button" target="_blank">📲 Baixar para Android</a>
     <a href="https://wa.me/message/3IY74MCWLWN2B1" class="button secundario" target="_blank">📺 iPhone / Smart TV</a>
 
     <div class="benefits">
@@ -107,6 +203,18 @@
             <img src="https://img.icons8.com/ios-filled/50/FFD700/star--v1.png" alt="Aprovado">
             <p>Aprovado por milhares</p>
         </div>
+    </div>
+
+    <div class="logos-marquee">
+        <img src="https://img.icons8.com/ios-filled/50/FFD700/netflix.png" alt="Netflix">
+        <img src="https://img.icons8.com/ios-filled/50/FFD700/disney-plus.png" alt="Disney">
+        <img src="https://img.icons8.com/ios-filled/50/FFD700/amazon-prime-video.png" alt="Prime">
+        <img src="https://img.icons8.com/ios-filled/50/FFD700/hbo.png" alt="HBO">
+        <img src="https://img.icons8.com/ios-filled/50/FFD700/star-plus.png" alt="Star+">
+    </div>
+
+    <div class="popup-whatsapp">
+        💬 Tem dúvidas? <a href="https://wa.me/message/3IY74MCWLWN2B1" target="_blank" style="color:#000;font-weight:bold;text-decoration:underline;">Fale no WhatsApp</a>
     </div>
 
     <footer>
