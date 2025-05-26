@@ -3,99 +3,38 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Afroworld | Seu Acesso Premium</title>
+<title>AfroGames | Divirta-se Agora</title>
 <link rel="icon" href="imagens/favicon.png">
 <style>
-body {
-    background-color: #000;
-    color: #fff;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-header {
-    padding: 40px 20px;
-}
-h1 {
-    font-size: 32px;
-}
-h2 {
-    font-size: 24px;
-}
-button {
-    padding: 15px 30px;
-    margin: 10px;
-    font-size: 18px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-}
-.android {
-    background-color: yellow;
-    color: black;
-}
-.ios {
-    background-color: lime;
-    color: black;
-}
-section {
-    padding: 40px 20px;
-}
-.logo-streaming img, .capas img, .depoimentos img {
-    width: 120px;
-    margin: 5px;
-}
-.mockup {
-    max-width: 400px;
-}
-footer {
-    padding: 20px;
-    background-color: #111;
-}
+body {background:#000;color:#fff;font-family:sans-serif;text-align:center;margin:0;}
+header,footer{padding:20px;}
+h1 {color:#FFD700;}
+.container{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;padding:20px;}
+.container img{width:100%;border-radius:10px;cursor:pointer;transition:0.3s;}
+.container img:hover{transform:scale(1.05);}
+button{padding:10px 20px;margin:5px;border:none;border-radius:5px;cursor:pointer;}
+.voltar{background:#FFD700;color:#000;}
 </style>
+<!-- Adsterra PopUnder -->
 </head>
 <body>
 
 <header>
-    <h1>Afroworld</h1>
-    <h2>Tudo o que você ama assistir, em um só lugar e com um único clique!</h2>
-    <h3>Baixe nosso app e tenha acesso agora!</h3>
-    <button class="android" onclick="window.location.href='https://links.unitvnet.app/IAFLDMW'">Baixar para Android</button>
-    <button class="ios" onclick="window.location.href='https://wa.me/5524999989882'">iPhone / Smart TV</button>
+<h1>AfroGames</h1>
+<p>🔥 Divirta-se com 50 jogos online gratuitos!</p>
+<button class="voltar" onclick="window.location.href='https://afroworld.com'">Voltar para Afroworld</button>
+<!-- Banner Topo -->
 </header>
 
-<section class="capas">
-    <h2>Os melhores conteúdos</h2>
-    <img src="imagens/capa1.jpg">
-    <img src="imagens/capa2.jpg">
-    <img src="imagens/capa3.jpg">
-</section>
-
-<section class="logo-streaming">
-    <h2>Inclui conteúdos de:</h2>
-    <img src="imagens/netflix.png">
-    <img src="imagens/prime.png">
-    <img src="imagens/disney.png">
-    <img src="imagens/star.png">
-    <img src="imagens/hbo.png">
-</section>
-
-<section class="depoimentos">
-    <h2>O que nossos usuários dizem</h2>
-    <p>"O melhor app que já usei, nunca mais pago por streaming." — Carlos, RJ</p>
-    <p>"Surreal, funciona em qualquer lugar!" — Danielle, SP</p>
-    <p>"Afroworld mudou meu jeito de assistir séries e filmes!" — João, SP</p>
-</section>
-
-<section>
-    <img src="imagens/mockup.png" alt="Mockup do App" class="mockup">
-</section>
+<div class="container">
+<a href="jogos/jogo1.html"><img src="imagens/capa1.jpg"></a>
+<a href="jogos/jogo2.html"><img src="imagens/capa2.jpg"></a>
+<a href="jogos/jogo3.html"><img src="imagens/capa3.jpg"></a>
+</div>
 
 <footer>
-    <p>Siga no Instagram: @afroworlld | WhatsApp: (24) 99998-9882</p>
-    <p>&copy; 2025 Afroworld - Todos os direitos reservados</p>
+<p>@Afroworlld | WhatsApp: (24)99998-9882</p>
+<!-- Banner Rodapé -->
 </footer>
 
 </body>
