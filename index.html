@@ -1,197 +1,101 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Afroworld Acesso</title>
-<style>
-:root {
-  --primary: #FFD700;
-  --secondary: #00FF85;
-  --bg: #000;
-  --text: #fff;
-  --highlight: #a020f0;
-}
-* {margin: 0; padding: 0; box-sizing: border-box;}
-body {
-  background: linear-gradient(to bottom, #111, #000);
-  color: var(--text);
-  font-family: 'Arial', sans-serif;
-  text-align: center;
-  padding: 20px;
-}
-.logo {
-  color: var(--primary);
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-h1 {
-  font-size: 26px;
-  margin-bottom: 15px;
-}
-h1 span { color: var(--primary); }
-p { color: #ccc; margin-bottom: 25px; }
-
-.button {
-  display: inline-block;
-  width: 90%;
-  max-width: 320px;
-  margin: 10px auto;
-  padding: 15px;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 18px;
-  text-decoration: none;
-  transition: 0.3s;
-}
-.button:hover { transform: scale(1.05); }
-
-.button.android {
-  background-color: var(--primary);
-  color: #000;
-}
-.button.iphone {
-  background-color: var(--secondary);
-  color: #000;
-}
-
-.capas-marquee {
-  overflow: hidden;
-  width: 100%;
-  margin: 30px 0;
-}
-.capas-track {
-  display: flex;
-  width: max-content;
-}
-.capas-track img {
-  width: 150px;
-  margin: 0 10px;
-  border-radius: 12px;
-  transition: transform 0.3s;
-}
-.capas-track img:hover { transform: scale(1.05); }
-
-/* Animações */
-.scroll-left {
-  animation: scrollLeft 40s linear infinite;
-}
-.scroll-right {
-  animation: scrollRight 40s linear infinite;
-}
-
-@keyframes scrollLeft {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-@keyframes scrollRight {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(50%); }
-}
-
-.benefits {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin: 30px 0;
-}
-.benefit {
-  background-color: #111;
-  padding: 15px;
-  border-radius: 12px;
-  width: 220px;
-  border: 1px solid var(--highlight);
-}
-.benefit img { width: 50px; margin-bottom: 10px; }
-.benefit p { font-size: 14px; }
-
-.badge {
-  background-color: var(--highlight);
-  color: var(--text);
-  padding: 10px 20px;
-  border-radius: 30px;
-  margin: 20px auto;
-  display: inline-block;
-  font-weight: bold;
-}
-
-footer {
-  margin-top: 40px;
-  color: #555;
-  font-size: 12px;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>AfroWorld - Filmes</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h2 {
+      margin-top: 40px;
+    }
+    .marquee-container {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      height: 250px;
+      margin-bottom: 40px;
+    }
+    .marquee {
+      display: flex;
+      width: calc(250px * 10 * 2);
+      animation: scroll-left 20s linear infinite;
+    }
+    .marquee img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      margin-right: 10px;
+      border-radius: 10px;
+    }
+    @keyframes scroll-left {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+    .marquee.reverse {
+      animation: scroll-right 20s linear infinite;
+    }
+    @keyframes scroll-right {
+      0% {
+        transform: translateX(-50%);
+      }
+      100% {
+        transform: translateX(0);
+      }
+    }
+  </style>
 </head>
 <body>
 
-<div class="logo">🔓 AFROWORLD</div>
+  <h1>AfroWorld - Filmes com Protagonistas Negros</h1>
 
-<h1>O acesso que <span>todo mundo procura</span>...<br>mas poucos sabem onde encontrar.</h1>
-<p>Seu acesso sem limites começa aqui. <br>Escolha seu dispositivo e desbloqueie agora.</p>
-
-<a href="https://links.unitvnet.app/IAFLDMW" class="button android" target="_blank">📲 Baixar para Android</a>
-<a href="https://wa.me/message/3IY74MCWLWN2B1" class="button iphone" target="_blank">📺 iPhone / Smart TV</a>
-
-<!-- Faixa 1 - Vai para esquerda -->
-<div class="capas-marquee">
-  <div class="capas-track scroll-left">
-    <img src="https://image.tmdb.org/t/p/w500/8GxvptC1HfCdb2VqN8gONzOB9k6.jpg" alt="Oppenheimer">
-    <img src="https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg" alt="Guardiões da Galáxia">
-    <img src="https://image.tmdb.org/t/p/w500/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg" alt="Vingadores">
-    <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Spider-Man">
-    <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Avatar">
-    <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="The Batman">
-    <!-- DUPLICADO -->
-    <img src="https://image.tmdb.org/t/p/w500/8GxvptC1HfCdb2VqN8gONzOB9k6.jpg">
-    <img src="https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg">
-    <img src="https://image.tmdb.org/t/p/w500/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg">
-    <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg">
-    <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg">
-    <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg">
+  <h2>🎭 Comédia</h2>
+  <div class="marquee-container">
+    <div class="marquee">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Coming 2 America">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTYxNjYxNzQ3MF5BMl5BanBnXkFtZTcwODkzNzYzMw@@._V1_.jpg" alt="White Chicks">
+      <img src="https://m.media-amazon.com/images/M/MV5BNzQzYjI2NzgtYjYxZi00YjY0LTk4YzMtYjYxYjYxYjYxYjYxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" alt="Girls Trip">
+      <!-- Duplicar para loop contínuo -->
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Coming 2 America">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTYxNjYxNzQ3MF5BMl5BanBnXkFtZTcwODkzNzYzMw@@._V1_.jpg" alt="White Chicks">
+      <img src="https://m.media-amazon.com/images/M/MV5BNzQzYjI2NzgtYjYxZi00YjY0LTk4YzMtYjYxYjYxYjYxYjYxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" alt="Girls Trip">
+    </div>
   </div>
-</div>
 
-<!-- Faixa 2 - Vai para direita -->
-<div class="capas-marquee">
-  <div class="capas-track scroll-right">
-    <img src="https://image.tmdb.org/t/p/w500/bxSBOAD8AuMHYMdW3jso9npAkgt.jpg" alt="Tulsa King">
-    <img src="https://image.tmdb.org/t/p/w500/t8YjA2FBD2X4rGTgkpQJZ3pX6RD.jpg" alt="Grey's Anatomy">
-    <img src="https://image.tmdb.org/t/p/w500/zEqyD0SBt6HL7W9JQoWw1qHJjLR.jpg" alt="The Flash">
-    <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7Z6d0tiUbe1Q7oU6z8m.jpg" alt="Breaking Bad">
-    <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="Wonder Woman">
-    <img src="https://image.tmdb.org/t/p/w500/hZkgoQYus5vegHoetLkCJzb17zJ.jpg" alt="Se7en">
-    <!-- DUPLICADO -->
-    <img src="https://image.tmdb.org/t/p/w500/bxSBOAD8AuMHYMdW3jso9npAkgt.jpg">
-    <img src="https://image.tmdb.org/t/p/w500/t8YjA2FBD2X4rGTgkpQJZ3pX6RD.jpg">
-    <img src="https://image.tmdb.org/t/p/w500/zEqyD0SBt6HL7W9JQoWw1qHJjLR.jpg">
-    <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7Z6d0tiUbe1Q7oU6z8m.jpg">
-    <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg">
-    <img src="https://image.tmdb.org/t/p/w500/hZkgoQYus5vegHoetLkCJzb17zJ.jpg">
+  <h2>🔥 Ação</h2>
+  <div class="marquee-container">
+    <div class="marquee reverse">
+      <img src="https://m.media-amazon.com/images/M/MV5BMTg1NTYxNTYxMF5BMl5BanBnXkFtZTgwNzYxNzYzNzM@._V1_.jpg" alt="Black Panther">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Bad Boys for Life">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="The Equalizer">
+      <!-- Duplicar para loop contínuo -->
+      <img src="https://m.media-amazon.com/images/M/MV5BMTg1NTYxNTYxMF5BMl5BanBnXkFtZTgwNzYxNzYzNzM@._V1_.jpg" alt="Black Panther">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Bad Boys for Life">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="The Equalizer">
+    </div>
   </div>
-</div>
 
-<div class="badge">7 DIAS DE GARANTIA</div>
-
-<div class="benefits">
-  <div class="benefit">
-    <img src="https://img.icons8.com/ios-filled/50/FFD700/ok.png">
-    <p>Simples e rápido</p>
+  <h2>💘 Romance</h2>
+  <div class="marquee-container">
+    <div class="marquee">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Malcolm & Marie">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="The Photograph">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Queen & Slim">
+      <!-- Duplicar para loop contínuo -->
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Malcolm & Marie">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="The Photograph">
+      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Queen & Slim">
+    </div>
   </div>
-  <div class="benefit">
-    <img src="https://img.icons8.com/ios-filled/50/FFD700/lock--v1.png">
-    <p>100% seguro</p>
-  </div>
-  <div class="benefit">
-    <img src="https://img.icons8.com/ios-filled/50/FFD700/star--v1.png">
-    <p>Aprovado por milhares</p>
-  </div>
-</div>
-
-<footer>
-&copy; 2025 Afroworld. Todos os direitos reservados.
-</footer>
 
 </body>
 </html>
