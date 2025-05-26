@@ -3,38 +3,78 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>AfroGames | Divirta-se Agora</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AfroGames | Subway Surfers</title>
 <link rel="icon" href="imagens/favicon.png">
 <style>
-body {background:#000;color:#fff;font-family:sans-serif;text-align:center;margin:0;}
-header,footer{padding:20px;}
-h1 {color:#FFD700;}
-.container{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:15px;padding:20px;}
-.container img{width:100%;border-radius:10px;cursor:pointer;transition:0.3s;}
-.container img:hover{transform:scale(1.05);}
-button{padding:10px 20px;margin:5px;border:none;border-radius:5px;cursor:pointer;}
-.voltar{background:#FFD700;color:#000;}
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header, footer {
+    padding: 20px;
+    background-color: #111;
+}
+h1 {
+    font-size: 28px;
+    color: #FFD700;
+    margin: 10px 0;
+}
+h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+button {
+    background-color: #FFD700;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 10px;
+}
+button:hover {
+    background-color: #ffc400;
+}
+.container {
+    padding: 20px;
+}
+img {
+    width: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+img:hover {
+    transform: scale(1.05);
+}
+footer p {
+    color: #aaa;
+    font-size: 14px;
+}
 </style>
-<!-- Adsterra PopUnder -->
 </head>
 <body>
 
 <header>
-<h1>AfroGames</h1>
-<p>🔥 Divirta-se com 50 jogos online gratuitos!</p>
-<button class="voltar" onclick="window.location.href='https://afroworld.com'">Voltar para Afroworld</button>
-<!-- Banner Topo -->
+    <h1>AfroGames</h1>
+    <h2>🔥 Subway Surfers — Clique para jogar!</h2>
+    <button onclick="window.location.href='https://afroworld.com'">Voltar para Afroworld</button>
 </header>
 
 <div class="container">
-<a href="jogos/jogo1.html"><img src="imagens/capa1.jpg"></a>
-<a href="jogos/jogo2.html"><img src="imagens/capa2.jpg"></a>
-<a href="jogos/jogo3.html"><img src="imagens/capa3.jpg"></a>
+    <a href="https://ubg77.com/game/subway-surfers" target="_blank">
+        <img src="imagens/subway.png" alt="Subway Surfers">
+    </a>
+    <p>Clique na imagem para jogar em uma nova aba.</p>
 </div>
 
 <footer>
-<p>@Afroworlld | WhatsApp: (24)99998-9882</p>
-<!-- Banner Rodapé -->
+    <p>@Afroworlld | WhatsApp: (24) 99998-9882</p>
 </footer>
 
 </body>

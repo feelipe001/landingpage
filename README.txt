@@ -1,25 +1,15 @@
 
-🦈 AfroGames - README
+🦈 AfroGames - Subway Surfers
 
-🔗 Como configurar seus anúncios Adsterra:
+📜 Como configurar seus anúncios (Adsterra):
 
 1️⃣ PopUnder
-- Vá até o arquivo index.html (e também nas páginas dos jogos dentro da pasta /jogos).
-- Procure pelo comentário: <!-- Adsterra PopUnder -->
-- Cole o seu script de PopUnder da Adsterra exatamente nesse local.
+- Adicione seu código de PopUnder no <head> ou antes de </body>.
 
-2️⃣ Banner Topo
-- No index.html e nas páginas dos jogos, procure pelo comentário: <!-- Banner Topo -->
-- Substitua o código modelo pelo seu script de banner topo da Adsterra.
+2️⃣ Banner Topo e Rodapé
+- Você pode colocar banners no header ou no footer. O local já está marcado no HTML.
 
-3️⃣ Banner Rodapé
-- Procure pelo comentário: <!-- Banner Rodapé -->
-- Substitua pelo seu script de banner da Adsterra.
+🚀 Para adicionar mais jogos:
+- Copie esse template, troque o nome da imagem, título e o link do jogo no <a href="">.
 
-✔️ Localização dos arquivos:
-- index.html → Página principal com todos os jogos.
-- /jogos → Pasta com as páginas individuais de cada jogo.
-
-💸 Quando tiver seu Publisher ID da Adsterra, é só substituir no código e começar a faturar!
-
-🚀 Qualquer dúvida, chama no suporte do Afroworld. Tamo junto, visão! 🦈💸🚀
+💸 Bora faturar! Tamo junto, visão! 🦈🔥🚀
