@@ -1,166 +1,177 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Afroworld Acesso</title>
-    <style>
-        :root {
-            --primary: #FFD700;
-            --secondary: #00FF85;
-            --bg: #000;
-            --text: #fff;
-            --highlight: #a020f0;
-        }
-        * {margin: 0; padding: 0; box-sizing: border-box;}
-        body {
-            background: linear-gradient(to bottom, #111, #000);
-            color: var(--text);
-            font-family: 'Arial', sans-serif;
-            text-align: center;
-            padding: 20px;
-        }
-        .logo {
-            color: var(--primary);
-            font-size: 32px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        h1 {
-            font-size: 26px;
-            margin-bottom: 15px;
-        }
-        h1 span { color: var(--primary); }
-        p { color: #ccc; margin-bottom: 25px; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afroworld Acesso</title>
+<style>
+:root {
+  --primary: #FFD700;
+  --secondary: #00FF85;
+  --bg: #000;
+  --text: #fff;
+  --highlight: #a020f0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: linear-gradient(to bottom, #111, #000);
+  color: var(--text);
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+.logo {
+  color: var(--primary);
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+h1 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+h1 span { color: var(--primary); }
+p { color: #ccc; margin-bottom: 25px; }
 
-        .button {
-            display: inline-block;
-            width: 90%;
-            max-width: 320px;
-            margin: 10px auto;
-            padding: 15px;
-            border-radius: 10px;
-            font-weight: bold;
-            font-size: 18px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .button:hover { transform: scale(1.05); }
+.button {
+  display: inline-block;
+  width: 90%;
+  max-width: 320px;
+  margin: 10px auto;
+  padding: 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.button:hover { transform: scale(1.05); }
 
-        .button.android {
-            background-color: var(--primary);
-            color: #000;
-        }
-        .button.iphone {
-            background-color: var(--secondary);
-            color: #000;
-        }
+.button.android {
+  background-color: var(--primary);
+  color: #000;
+}
+.button.iphone {
+  background-color: var(--secondary);
+  color: #000;
+}
 
-        .capas-marquee {
-            overflow: hidden;
-            white-space: nowrap;
-            width: 100%;
-            margin: 30px 0;
-        }
-        .capas-track {
-            display: inline-flex;
-            animation: scroll 35s linear infinite;
-        }
-        .capas-track img {
-            width: 150px;
-            margin: 0 10px;
-            border-radius: 12px;
-            transition: transform 0.3s;
-        }
-        .capas-track img:hover { transform: scale(1.05); }
+.capas-marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+  margin: 30px 0;
+}
+.capas-track {
+  display: inline-flex;
+  animation: scroll 40s linear infinite;
+}
+.capas-track img {
+  width: 150px;
+  margin: 0 10px;
+  border-radius: 12px;
+  transition: transform 0.3s;
+}
+.capas-track img:hover { transform: scale(1.05); }
 
-        .benefits {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin: 30px 0;
-        }
-        .benefit {
-            background-color: #111;
-            padding: 15px;
-            border-radius: 12px;
-            width: 220px;
-            border: 1px solid var(--highlight);
-        }
-        .benefit img { width: 50px; margin-bottom: 10px; }
-        .benefit p { font-size: 14px; }
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 30px 0;
+}
+.benefit {
+  background-color: #111;
+  padding: 15px;
+  border-radius: 12px;
+  width: 220px;
+  border: 1px solid var(--highlight);
+}
+.benefit img { width: 50px; margin-bottom: 10px; }
+.benefit p { font-size: 14px; }
 
-        .badge {
-            background-color: var(--highlight);
-            color: var(--text);
-            padding: 10px 20px;
-            border-radius: 30px;
-            margin: 20px auto;
-            display: inline-block;
-            font-weight: bold;
-        }
+.badge {
+  background-color: var(--highlight);
+  color: var(--text);
+  padding: 10px 20px;
+  border-radius: 30px;
+  margin: 20px auto;
+  display: inline-block;
+  font-weight: bold;
+}
 
-        footer {
-            margin-top: 40px;
-            color: #555;
-            font-size: 12px;
-        }
+footer {
+  margin-top: 40px;
+  color: #555;
+  font-size: 12px;
+}
 
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-    </style>
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
 </head>
 <body>
 
-    <div class="logo">🔓 AFROWORLD</div>
+<div class="logo">🔓 AFROWORLD</div>
 
-    <h1>O acesso que <span>todo mundo procura</span>...<br>mas poucos sabem onde encontrar.</h1>
-    <p>Seu acesso sem limites começa aqui. <br>Escolha seu dispositivo e desbloqueie agora.</p>
+<h1>O acesso que <span>todo mundo procura</span>...<br>mas poucos sabem onde encontrar.</h1>
+<p>Seu acesso sem limites começa aqui. <br>Escolha seu dispositivo e desbloqueie agora.</p>
 
-    <a href="https://links.unitvnet.app/IAFLDMW" class="button android" target="_blank">📲 Baixar para Android</a>
-    <a href="https://wa.me/message/3IY74MCWLWN2B1" class="button iphone" target="_blank">📺 iPhone / Smart TV</a>
+<a href="https://links.unitvnet.app/IAFLDMW" class="button android" target="_blank">📲 Baixar para Android</a>
+<a href="https://wa.me/message/3IY74MCWLWN2B1" class="button iphone" target="_blank">📺 iPhone / Smart TV</a>
 
-    <div class="capas-marquee">
-        <div class="capas-track">
-            <img src="https://image.tmdb.org/t/p/w500/8GxvptC1HfCdb2VqN8gONzOB9k6.jpg" alt="Oppenheimer">
-            <img src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg" alt="Velozes e Furiosos 10">
-            <img src="https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg" alt="Guardiões da Galáxia Vol. 3">
-            <img src="https://image.tmdb.org/t/p/w500/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg" alt="Vingadores Ultimato">
-            <img src="https://image.tmdb.org/t/p/w500/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg" alt="Shang-Chi">
-            <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Spider-Man No Way Home">
-            <img src="https://image.tmdb.org/t/p/w500/7slI7qLOLS2z3bmFMwvzZ4v9Qj4.jpg" alt="Pantera Negra">
-            <img src="https://image.tmdb.org/t/p/w500/6iXf1bUvHp3GAH2MqPzqWOu7gdD.jpg" alt="Garfield Fora de Casa">
-            <img src="https://image.tmdb.org/t/p/w500/56v2KjBlU4XaOv9rVYEQypROD7P.jpg" alt="Stranger Things">
-            <img src="https://image.tmdb.org/t/p/w500/vgF9hTYfJQ5oyOe1ZzqbtKlhk82.jpg" alt="Peaky Blinders">
-            <img src="https://image.tmdb.org/t/p/w500/bxSBOAD8AuMHYMdW3jso9npAkgt.jpg" alt="Tulsa King">
-            <img src="https://image.tmdb.org/t/p/w500/t8YjA2FBD2X4rGTgkpQJZ3pX6RD.jpg" alt="Grey's Anatomy">
-        </div>
-    </div>
+<!-- Faixa de capas 1 -->
+<div class="capas-marquee">
+  <div class="capas-track">
+    <img src="https://image.tmdb.org/t/p/w500/8GxvptC1HfCdb2VqN8gONzOB9k6.jpg" alt="Oppenheimer">
+    <img src="https://image.tmdb.org/t/p/w500/1E5baAaEse26fej7uHcjOgEE2t2.jpg" alt="Velozes 10">
+    <img src="https://image.tmdb.org/t/p/w500/r2J02Z2OpNTctfOSN1Ydgii51I3.jpg" alt="Guardiões da Galáxia">
+    <img src="https://image.tmdb.org/t/p/w500/ulzhLuWrPK07P1YkdWQLZnQh1JL.jpg" alt="Vingadores">
+    <img src="https://image.tmdb.org/t/p/w500/1BIoJGKbXjdFDAqUEiA2VHqkK1Z.jpg" alt="Shang-Chi">
+    <img src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg" alt="Spider-Man">
+    <img src="https://image.tmdb.org/t/p/w500/7slI7qLOLS2z3bmFMwvzZ4v9Qj4.jpg" alt="Pantera Negra">
+    <img src="https://image.tmdb.org/t/p/w500/56v2KjBlU4XaOv9rVYEQypROD7P.jpg" alt="Stranger Things">
+    <img src="https://image.tmdb.org/t/p/w500/vgF9hTYfJQ5oyOe1ZzqbtKlhk82.jpg" alt="Peaky Blinders">
+  </div>
+</div>
 
-    <div class="badge">7 DIAS DE GARANTIA</div>
+<!-- Faixa de capas 2 -->
+<div class="capas-marquee">
+  <div class="capas-track">
+    <img src="https://image.tmdb.org/t/p/w500/bxSBOAD8AuMHYMdW3jso9npAkgt.jpg" alt="Tulsa King">
+    <img src="https://image.tmdb.org/t/p/w500/t8YjA2FBD2X4rGTgkpQJZ3pX6RD.jpg" alt="Grey's Anatomy">
+    <img src="https://image.tmdb.org/t/p/w500/zEqyD0SBt6HL7W9JQoWw1qHJjLR.jpg" alt="The Flash">
+    <img src="https://image.tmdb.org/t/p/w500/hZkgoQYus5vegHoetLkCJzb17zJ.jpg" alt="Se7en">
+    <img src="https://image.tmdb.org/t/p/w500/9O1Iy9od7Z6d0tiUbe1Q7oU6z8m.jpg" alt="Breaking Bad">
+    <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="Wonder Woman">
+    <img src="https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg" alt="Avatar">
+    <img src="https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg" alt="The Batman">
+  </div>
+</div>
 
-    <div class="benefits">
-        <div class="benefit">
-            <img src="https://img.icons8.com/ios-filled/50/FFD700/ok.png">
-            <p>Simples e rápido</p>
-        </div>
-        <div class="benefit">
-            <img src="https://img.icons8.com/ios-filled/50/FFD700/lock--v1.png">
-            <p>100% seguro</p>
-        </div>
-        <div class="benefit">
-            <img src="https://img.icons8.com/ios-filled/50/FFD700/star--v1.png">
-            <p>Aprovado por milhares</p>
-        </div>
-    </div>
+<div class="badge">7 DIAS DE GARANTIA</div>
 
-    <footer>
-        &copy; 2025 Afroworld. Todos os direitos reservados.
-    </footer>
+<div class="benefits">
+  <div class="benefit">
+    <img src="https://img.icons8.com/ios-filled/50/FFD700/ok.png">
+    <p>Simples e rápido</p>
+  </div>
+  <div class="benefit">
+    <img src="https://img.icons8.com/ios-filled/50/FFD700/lock--v1.png">
+    <p>100% seguro</p>
+  </div>
+  <div class="benefit">
+    <img src="https://img.icons8.com/ios-filled/50/FFD700/star--v1.png">
+    <p>Aprovado por milhares</p>
+  </div>
+</div>
+
+<footer>
+&copy; 2025 Afroworld. Todos os direitos reservados.
+</footer>
 
 </body>
 </html>
