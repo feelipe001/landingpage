@@ -1,101 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <title>AfroWorld - Filmes</title>
-  <style>
-    body {
-      background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
-    h2 {
-      margin-top: 40px;
-    }
-    .marquee-container {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
-      height: 250px;
-      margin-bottom: 40px;
-    }
-    .marquee {
-      display: flex;
-      width: calc(250px * 10 * 2);
-      animation: scroll-left 20s linear infinite;
-    }
-    .marquee img {
-      width: 250px;
-      height: 250px;
-      object-fit: cover;
-      margin-right: 10px;
-      border-radius: 10px;
-    }
-    @keyframes scroll-left {
-      0% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-50%);
-      }
-    }
-    .marquee.reverse {
-      animation: scroll-right 20s linear infinite;
-    }
-    @keyframes scroll-right {
-      0% {
-        transform: translateX(-50%);
-      }
-      100% {
-        transform: translateX(0);
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Afroworld - Landing</title>
 </head>
 <body>
+<h1>Bem-vindo à Afroworld!</h1>
+<p>Clique na imagem abaixo para baixar nosso app:</p>
+<a href="#" onclick="downloadApp()">
+  <img src="imagens/capa1.jpg" width="200px">
+</a>
 
-  <h1>AfroWorld - Filmes com Protagonistas Negros</h1>
+<script>
+function downloadApp() {
+    const confirmar = confirm("🎬 Este conteúdo está disponível no nosso app! Baixando agora...");
+    if (confirmar) {
+      window.location.href = "https://links.unitvnet.app/IAFLDMW";
+    }
+}
+</script>
 
-  <h2>🎭 Comédia</h2>
-  <div class="marquee-container">
-    <div class="marquee">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Coming 2 America">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTYxNjYxNzQ3MF5BMl5BanBnXkFtZTcwODkzNzYzMw@@._V1_.jpg" alt="White Chicks">
-      <img src="https://m.media-amazon.com/images/M/MV5BNzQzYjI2NzgtYjYxZi00YjY0LTk4YzMtYjYxYjYxYjYxYjYxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" alt="Girls Trip">
-      <!-- Duplicar para loop contínuo -->
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Coming 2 America">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTYxNjYxNzQ3MF5BMl5BanBnXkFtZTcwODkzNzYzMw@@._V1_.jpg" alt="White Chicks">
-      <img src="https://m.media-amazon.com/images/M/MV5BNzQzYjI2NzgtYjYxZi00YjY0LTk4YzMtYjYxYjYxYjYxYjYxXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_.jpg" alt="Girls Trip">
-    </div>
-  </div>
-
-  <h2>🔥 Ação</h2>
-  <div class="marquee-container">
-    <div class="marquee reverse">
-      <img src="https://m.media-amazon.com/images/M/MV5BMTg1NTYxNTYxMF5BMl5BanBnXkFtZTgwNzYxNzYzNzM@._V1_.jpg" alt="Black Panther">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Bad Boys for Life">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="The Equalizer">
-      <!-- Duplicar para loop contínuo -->
-      <img src="https://m.media-amazon.com/images/M/MV5BMTg1NTYxNTYxMF5BMl5BanBnXkFtZTgwNzYxNzYzNzM@._V1_.jpg" alt="Black Panther">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Bad Boys for Life">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="The Equalizer">
-    </div>
-  </div>
-
-  <h2>💘 Romance</h2>
-  <div class="marquee-container">
-    <div class="marquee">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Malcolm & Marie">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="The Photograph">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Queen & Slim">
-      <!-- Duplicar para loop contínuo -->
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Malcolm & Marie">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="The Photograph">
-      <img src="https://m.media-amazon.com/images/M/MV5BMjI1OTk1NjY2N15BMl5BanBnXkFtZTcwNzYxODAzMw@@._V1_.jpg" alt="Queen & Slim">
-    </div>
-  </div>
+<p><a href="filmes/index.html">Acessar Filmes</a></p>
 
 </body>
 </html>
