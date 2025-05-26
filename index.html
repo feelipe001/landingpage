@@ -3,25 +3,58 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<title>Afroworld - Landing</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Afroworld - Seu Acesso</title>
+<style>
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+header {
+    padding: 40px;
+}
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+button {
+    padding: 15px 30px;
+    margin: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.android {
+    background-color: yellow;
+    color: black;
+}
+.ios {
+    background-color: lime;
+    color: black;
+}
+img {
+    max-width: 90%;
+    height: auto;
+    margin-top: 20px;
+}
+</style>
 </head>
 <body>
-<h1>Bem-vindo à Afroworld!</h1>
-<p>Clique na imagem abaixo para baixar nosso app:</p>
-<a href="#" onclick="downloadApp()">
-  <img src="imagens/capa1.jpg" width="200px">
-</a>
-
-<script>
-function downloadApp() {
-    const confirmar = confirm("🎬 Este conteúdo está disponível no nosso app! Baixando agora...");
-    if (confirmar) {
-      window.location.href = "https://links.unitvnet.app/IAFLDMW";
-    }
-}
-</script>
-
-<p><a href="filmes/index.html">Acessar Filmes</a></p>
-
+<header>
+    <h1>Afroworld</h1>
+    <h2>Tudo o que você ama assistir, em um só lugar e com um único clique!</h2>
+    <h3>Baixe nosso app e tenha acesso agora!</h3>
+    <button class="android" onclick="window.location.href='https://links.unitvnet.app/IAFLDMW'">Baixar para Android</button>
+    <button class="ios" onclick="window.location.href='https://wa.me/5524999989882'">iPhone / Smart TV</button>
+</header>
+<img src="imagens/mockup.png" alt="Afroworld App">
 </body>
 </html>
